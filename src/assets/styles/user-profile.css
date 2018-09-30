@@ -1,0 +1,146 @@
+/* Base Syles ================================ */
+:root {
+  --black: #272727;
+  --blue: #0073d1;
+  --green: #06d19c;
+}
+
+.wrapper {
+  background-color: #e2e2e2;
+}
+/* Profile */
+.profile-page {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  padding: 0 30px;
+}
+
+.profile-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  align-items: center;
+  padding: 20px 30px;
+  min-height: 200px;
+  margin-bottom: 50px;
+  background-color: #fff;
+  width: 90%;
+  border-radius: 3px;
+  margin-top: 3rem;
+}
+
+.profile-info img {
+  border-radius: 50%;
+  width: 140px;
+  height: auto;
+  padding: 4px;
+}
+
+.user-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  align-items: center;
+  border-right: 1px solid grey;
+}
+
+.profile-name {
+  justify-self: start;
+}
+
+.profile-links {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  justify-items: center;
+  background: #fff;
+  width: 90%;
+  margin-top: -48px;
+}
+
+.profile-links li {
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+}
+
+.profile-links li a {
+  display: block;
+}
+
+.profile-links li:hover {
+  border-bottom: 2px solid #0c6ebf;
+}
+
+.rides-count {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  text-align: center;
+}
+
+.rides-count h1 {
+  color: #0c6ebf;
+}
+
+.ride-img {
+  width: 150px;
+  height: auto;
+}
+
+.user-ride-count {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  margin-bottom: 30px;
+}
+
+.rides-block {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.rides {
+  background: #eee;
+  padding: 40px;
+}
+
+@media (max-width: 800px) {
+  .rides-block {
+    grid-template-columns: 1fr;
+  }
+  .profile-info {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .profile-page {
+    padding: 0 5px;
+  }
+  .user-info {
+    display: grid;
+    grid-template-columns: 1fr;
+   justify-items: center; 
+    border: none;
+  }
+  .profile-name {
+    justify-self: center;
+  }
+}
+
+@media (max-width: 700px) {
+  .profile-links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: start;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .profile-links {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: start;
+  }
+}
