@@ -1,0 +1,56 @@
+{
+  "name": "ride-my-way-client",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --mode development --open --hot",
+    "build": "webpack --mode production",
+    "lint": "eslint --fix \"src/**/*{js, jsx}\"",
+    "format": "prettier \"src/**/*.{js, jsx, css, html, json}\"",
+    "format:check": "prettier --list-different  \"src/**/*{js, jsx, css, json}\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emmaadesile/ride-my-way-client.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/emmaadesile/ride-my-way-client/issues"
+  },
+  "homepage": "https://github.com/emmaadesile/ride-my-way-client#readme",
+  "dependencies": {
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2"
+  },
+  "devDependencies": {
+    "@reach/router": "^1.2.1",
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^10.0.1",
+    "babel-loader": "^7.1.5",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^1.0.0",
+    "eslint": "^5.6.1",
+    "eslint-config-prettier": "^3.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-prettier": "^2.7.0",
+    "eslint-plugin-react": "^7.11.1",
+    "file-loader": "^2.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.4.3",
+    "node-sass": "^4.9.3",
+    "normalize.css": "^8.0.0",
+    "prettier": "^1.14.3",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.0",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.9"
+  }
+}
