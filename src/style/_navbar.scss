@@ -1,0 +1,23 @@
+.navbar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  padding: 30px 40px;
+
+  ul {
+    list-style: none;
+    display: grid;
+    align-items: center;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  img {
+    width: 100px;
+    height: auto
+  }
+}

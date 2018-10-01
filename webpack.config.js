@@ -37,12 +37,15 @@ module.exports = {
           },
           {
             loader: "sass-loader"
+          },
+          {
+            loader: "postcss-loader"
           }
         ]
       },
       {
-        test: /\.(jpg, jpe?g, svg, png, ico)$/,
-        use: ["file-loader", "url-loader"]
+        test: /\.(jpe?g|svg|png|ico)$/i,
+        use: ["file-loader"]
       }
     ]
   },

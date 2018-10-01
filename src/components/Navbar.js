@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from '@reach/router';
+import rideLogo from '../static/rideLogo.png';
 
 class Navbar extends Component {
   state = {
@@ -8,11 +9,11 @@ class Navbar extends Component {
   render() {
 
     return (
-      <div>
+      <div className='navbar'>
         {
           this.state.isLoggeIn
           ? <ul>
-              {/* <li><Link to='/'><img src={logo} alt='logo' /></Link></li> */}
+              <li className='logo'><Link to='/'><img src={rideLogo} alt='logo' /></Link></li>
               <li><Link to='/about'>About</Link></li>
               <li><Link to='/auth/login'>Logout</Link></li>
               <li><Link to='/rides'>Rides</Link></li>
@@ -21,7 +22,7 @@ class Navbar extends Component {
               <li><Link to='/user-profile'>Your Profile</Link></li>
             </ul>
           : <ul>
-              {/* <li><Link to='/'><img src={logo} alt='logo' /></Link></li> */}
+              <li><Link to='/'><img src={rideLogo} alt='logo' /></Link></li>
               <li><Link to='/about'>About</Link></li>
               <li><Link to='/auth/login'>Login</Link></li>
               <li><Link to='/auth/signup'>Signup</Link></li>
