@@ -1,0 +1,17 @@
+language: node_js
+node_js: "stable"
+
+cache: 
+  directories:
+    - node_modules
+
+script:
+  - npm run start
+  - npm run build
+
+after_success:
+  - npm run coverage
+
+deploy:
+  skip_cleanup: true
+  provider: Heroku

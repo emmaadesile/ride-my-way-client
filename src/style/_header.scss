@@ -1,0 +1,8 @@
+.header {
+  background-image: url('../static/haze.jpg');
+  clip-path: polygon(0px, 0px, 100%, 0%, 100%, 71%, 0px, 91%);
+  width: 100%;
+  background-blend-mode: multiply;
+  color: #fff;
+  background-color: rgb(95, 5, 100);
+}

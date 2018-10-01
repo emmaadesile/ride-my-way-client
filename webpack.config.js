@@ -9,7 +9,7 @@ const htmlPlugin = new HtmlWebPackPlugin({
 const miniCssExtractPlugin = new MiniCssExtractPlugin({
   filename: "style.css",
   chunkFilename: "id.css"
-})
+});
 
 module.exports = {
   module: {
@@ -17,7 +17,7 @@ module.exports = {
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        use: 'babel-loader'
+        use: "babel-loader"
       },
       {
         test: /\.(css|sass|scss)$/,
@@ -41,8 +41,8 @@ module.exports = {
         ]
       },
       {
-        test: /\.{jpg, jpe?g, svg, png}$/,
-        use: "file-loader"
+        test: /\.(jpg, jpe?g, svg, png, ico)$/,
+        use: ["file-loader", "url-loader"]
       }
     ]
   },
