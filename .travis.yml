@@ -6,12 +6,21 @@ cache:
     - node_modules
 
 script:
-  - npm run start
-  - npm run build
+  - npm test
+
+env:
+  - CI=true
 
 after_success:
   - npm run coverage
 
+before_deploy:
+  - npm install netlify-cli -g
+  - npm run build
+
 deploy:
+  provider: script
+  script: netlify deploy -s $ride-my-way.netlify.com -t $NETLIFY_PUBLISH_KEY -p ./build
   skip_cleanup: true
-  provider: Heroku
+  on:
+    branch: develop
