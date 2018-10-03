@@ -1,0 +1,82 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[` 1`] = `
+<div
+  role="group"
+  style={
+    Object {
+      "outline": "none",
+    }
+  }
+  tabIndex="-1"
+>
+  <div>
+    <div
+      className="navbar"
+    >
+      <div
+        className="container navbar__container"
+      >
+        <li
+          className="logo"
+        >
+          <a
+            aria-current="page"
+            href="/"
+            onClick={[Function]}
+          >
+            <img
+              alt="logo"
+              src="rideLogo.png"
+            />
+          </a>
+        </li>
+        <ul>
+          <li>
+            <a
+              href="/about"
+              onClick={[Function]}
+            >
+              About
+            </a>
+          </li>
+          <li>
+            <a
+              href="/auth/login"
+              onClick={[Function]}
+            >
+              Log in
+            </a>
+          </li>
+          <li
+            className="register"
+          >
+            <a
+              href="/auth/signup"
+              onClick={[Function]}
+            >
+              Register
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div
+      className="header"
+    >
+      <div
+        className="container header__content"
+      >
+        <h2>
+          Header
+        </h2>
+      </div>
+    </div>
+    <div>
+      <h1>
+        Footer
+      </h1>
+    </div>
+  </div>
+</div>
+`;
