@@ -1,19 +1,48 @@
+$secondary-color: #ff00bf;
+
+@mixin padding {
+  padding: 20px 30px;
+}
+
 .navbar {
   width: 100%;
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 500;
   background-color: transparent;
-  padding: 30px 40px;
+  padding: 40px 0;
+  display: grid;
+  justify-items: center;
 
-  ul {
-    list-style: none;
+  .navbar__container {
     display: grid;
+    grid-template-columns: 1fr 10fr;
+    justify-items: center;
     align-items: center;
+
+    ul {
+      display: grid;
+      grid-template-columns: repeat(3, 100px);
+      align-items: center;
+      justify-self: end;
+
+      li {
+        justify-self: center;
+      }
+
+      a:hover {
+        color: $secondary-color;
+        display: block;
+      }
+    }
   }
+
 
   a {
     text-decoration: none;
+    color: #fff;
+    transition: 0.5s all cubic-bezier(0.075, 0.82, 0.165, 1);
   }
 
   img {

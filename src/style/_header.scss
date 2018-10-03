@@ -4,8 +4,17 @@
   background-size: cover;
   background-blend-mode: multiply;
   background-color: rgb(55, 73, 100);
+  padding-top: 100px;
   color: #fff;
-  height: 100vh;
-  clip-path: polygon(100% 0, 100% 73%, 0 100%, 0 0);
-  margin-top: -25px;
+  height: 800px;
+  // clip-path: polygon(100% 0, 100% 73%, 0 100%, 0 0);
+  // position: relative;
+  // top: 0;
+  // left: 0;
+  display: grid;
+  justify-items: center;
+
+  .header__content {
+    margin-top: 4em;
+  }
 }
