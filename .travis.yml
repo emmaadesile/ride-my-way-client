@@ -19,8 +19,9 @@ before_deploy:
   - npm run build
 
 deploy:
-   - chmod +x ./scripts/deploy.sh
-   - ./scripts/deploy.sh
+   provider: heroku
+   api_key: 
+     secure: 44f71d56-9db2-4433-b535-b8e32d5aa259
   skip_cleanup: true
   on:
     branch: develop

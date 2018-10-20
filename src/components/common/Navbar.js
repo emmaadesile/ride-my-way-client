@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from '@reach/router';
-import rideLogo from '../static/rideLogo.png';
+import rideLogo from '../../static/rideLogo.png';
 
 class Navbar extends Component {
   state = {
@@ -28,7 +28,7 @@ class Navbar extends Component {
               <ul>
                 <li><Link to='/about'>About</Link></li>
                 <li><Link to='/auth/login'>Log in</Link></li>
-                <li className='register'><Link to='/auth/signup'>Register</Link></li>
+                <li><Link to='/auth/signup' className='register'>Register</Link></li>
               </ul>
             </div>
         }

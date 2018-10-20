@@ -48,10 +48,9 @@ exports[` 1`] = `
               Log in
             </a>
           </li>
-          <li
-            className="register"
-          >
+          <li>
             <a
+              className="register"
               href="/auth/signup"
               onClick={[Function]}
             >
