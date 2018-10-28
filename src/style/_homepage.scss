@@ -1,0 +1,92 @@
+$line-height: 1.6em;
+
+.header {
+  width: 100%;
+  background-image: url("../assets/img/drivers.jpg");
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-color: rgb(21, 62, 118);
+  color: #fff;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+
+  .header__content {
+    margin-top: 4em;
+  }
+}
+
+.intro {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(minmax(500px, 1fr));
+  padding: 100px 100px;
+  text-align: center;
+  line-height: $line-height;
+}
+
+.features,
+.intro {
+  padding: 100px 100px;
+}
+
+/* Features */
+.features {
+  display: grid;
+  justify-items: center;
+  background: #eeeeee;
+  color: rgb(67, 67, 67);
+}
+
+.features-grid {
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 50px;
+  justify-items: center;
+}
+
+.feature {
+  padding: 20px;
+  background: white;
+  border: 1px solid white;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 3px 3px 2px rgb(225, 225, 225);
+  display: grid;
+  justify-items: center;
+}
+
+.feature-heading {
+  grid-column: 1 / -1;
+  justify-self: center;
+}
+
+.feature .icon {
+  width: 140px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.lead {
+  color: rgb(78, 78, 78);
+}
+
+.about {
+  padding: 100px;
+  display: grid;
+  justify-items: center;
+
+  .about__details {
+    max-width: 500px;
+    line-height: 1.8em;
+
+    h4 {
+      text-align: center;
+    }
+  }
+}
