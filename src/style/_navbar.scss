@@ -1,4 +1,4 @@
-$secondary-color: #ff00bf;
+$primary-color: #ff00bf;
 
 @mixin padding {
   padding: 20px 30px;
@@ -31,8 +31,21 @@ $secondary-color: #ff00bf;
         justify-self: center;
       }
 
+      li .register {
+        display: block;
+        border: 1px solid #fff;
+        border-radius: 5px;
+        padding: 10px 30px;
+
+        &:hover {
+          background: $primary-color;
+          color: #fff;
+          border: 1px solid $primary-color;
+        }
+      }
+
       a:hover {
-        color: $secondary-color;
+        color: $primary-color;
         display: block;
       }
     }
@@ -49,4 +62,8 @@ $secondary-color: #ff00bf;
     width: 100px;
     height: auto
   }
+}
+
+@media screen and (max-width: 1028px) {
+    
 }

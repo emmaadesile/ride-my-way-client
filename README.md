@@ -1,9 +1,9 @@
-https://travis-ci.org/emmaadesile/ride-my-way-client.svg?branch=develop [![Coverage Status](https://coveralls.io/repos/github/emmaadesile/ride-my-way-client/badge.svg?branch=ch-setup-react-app-160949901)](https://coveralls.io/github/emmaadesile/ride-my-way-client?branch=ch-setup-react-app-160949901)
+[![Build Status](https://travis-ci.org/emmaadesile/ride-my-way-client.svg?branch=develop)](https://travis-ci.org/emmaadesile/ride-my-way-client) [![Coverage Status](https://coveralls.io/repos/github/emmaadesile/ride-my-way-client/badge.svg?branch=ch-setup-react-app-160949901)](https://coveralls.io/github/emmaadesile/ride-my-way-client?branch=ch-setup-react-app-160949901)
 
 
 # Ride My Way Client
 
-This the client app for Ride-My-Way (API)[https://github.com/emmaadesile/Ride-My-Way]
+This the client app for Ride-My-Way [API](https://github.com/emmaadesile/Ride-My-Way)
 
 ## Getting Started
 
@@ -60,11 +60,6 @@ Checks the app for errors and fixes them if possible
 ### `npm run format`
 
 Formats the app using the prettier plugin
-
-## Deployment
-The app is proudly hosted on [ride-my-way](https://ride-my-way.netlify.com/)
-
-Update the travis file with your settings
 
 ## Built With
 
