@@ -13,15 +13,3 @@ env:
 
 after_success:
   - npm run coverage
-
-before_deploy:
-  - npm install netlify-cli -g
-  - npm run build
-
-deploy:
-   provider: heroku
-   api_key: 
-     secure: 44f71d56-9db2-4433-b535-b8e32d5aa259
-  skip_cleanup: true
-  on:
-    branch: develop

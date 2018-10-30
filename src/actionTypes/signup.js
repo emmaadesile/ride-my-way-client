@@ -1,0 +1,3 @@
+export const SIGNUP_SUCCESS = 'SIGNUP_SUCCESS';
+export const SIGNUP_LOADING = 'SIGUP_LOADING';
+export const SIGNUP_ERROR= 'SIGNUP_ERROR';

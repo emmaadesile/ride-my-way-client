@@ -5,7 +5,6 @@ import About from "./views/About/About";
 import UserProfile from "./views/UserProfile/UserProfile";
 import Signup from "./views/Signup/Signup";
 import Login from "./views/Login/Login";
-import Navbar from "./components/common/Navbar";
 import Footer from "./components/common/Footer";
 
 class AppRoutes extends Component {
@@ -13,7 +12,6 @@ class AppRoutes extends Component {
     return (
       <Router>
         <Fragment>
-          <Navbar />
           <Switch>
             <Route exact path="/" component={Homepage} />
             <Route path="/auth/signup" component={Signup} />

@@ -12,6 +12,13 @@ const miniCssExtractPlugin = new MiniCssExtractPlugin({
 });
 
 module.exports = {
+  entry: {
+    filename: "./src/index.js"
+  },
+  output: {
+    filename: "bundle.js",
+    publicPath: "/"
+  },
   module: {
     rules: [
       {
@@ -48,6 +55,9 @@ module.exports = {
         use: ["file-loader"]
       }
     ]
+  },
+  devServer: {
+    historyApiFallback: true,
   },
   plugins: [htmlPlugin, miniCssExtractPlugin]
 };

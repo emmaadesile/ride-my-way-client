@@ -3,11 +3,14 @@ import { Link } from "react-router-dom";
 import customerCare from "../../assets/img/customerCare.png";
 import confirmed from "../../assets/img/confirmed.png";
 import timeManagement from "../../assets/img/timeManagement.png";
+import Navbar from "../../components/common/Navbar";
+import Footer from "../../components/common/Footer";
 
 const Homepage = () => {
   return (
     <Fragment>
       <div className="">
+        <Navbar />
         <header className="header header__content">
           <h1>Get the best deals on your rides</h1>
           <h2>
@@ -15,7 +18,7 @@ const Homepage = () => {
             <br />
             and money on your commute everyday
           </h2>
-          <Link to="/signup">Get Started</Link>
+          <Link to="/auth/signup">Get Started</Link>
         </header>
 
         <div className="intro text-center ">
@@ -85,6 +88,7 @@ const Homepage = () => {
           </div>
         </section>
       </div>
+      <Footer />
     </Fragment>
   );
 };
