@@ -3,56 +3,56 @@
 exports[` 1`] = `
 <div>
   <div
-    className="navbar"
-  >
-    <div
-      className="container navbar__container"
-    >
-      <li
-        className="logo"
-      >
-        <a
-          href="/"
-          onClick={[Function]}
-        >
-          <img
-            alt="logo"
-            src="rideLogo.png"
-          />
-        </a>
-      </li>
-      <ul>
-        <li>
-          <a
-            href="/about"
-            onClick={[Function]}
-          >
-            About
-          </a>
-        </li>
-        <li>
-          <a
-            href="/auth/login"
-            onClick={[Function]}
-          >
-            Log in
-          </a>
-        </li>
-        <li>
-          <a
-            className="register"
-            href="/auth/signup"
-            onClick={[Function]}
-          >
-            Register
-          </a>
-        </li>
-      </ul>
-    </div>
-  </div>
-  <div
     className=""
   >
+    <div
+      className="navbar"
+    >
+      <div
+        className="container navbar__container"
+      >
+        <li
+          className="logo"
+        >
+          <a
+            href="/"
+            onClick={[Function]}
+          >
+            <img
+              alt="logo"
+              src="rideLogo.png"
+            />
+          </a>
+        </li>
+        <ul>
+          <li>
+            <a
+              href="/about"
+              onClick={[Function]}
+            >
+              About
+            </a>
+          </li>
+          <li>
+            <a
+              href="/auth/login"
+              onClick={[Function]}
+            >
+              Log in
+            </a>
+          </li>
+          <li>
+            <a
+              className="register"
+              href="/auth/signup"
+              onClick={[Function]}
+            >
+              Register
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
     <header
       className="header header__content"
     >
@@ -65,7 +65,7 @@ exports[` 1`] = `
         and money on your commute everyday
       </h2>
       <a
-        href="/signup"
+        href="/auth/signup"
         onClick={[Function]}
       >
         Get Started
@@ -169,6 +169,13 @@ exports[` 1`] = `
       </div>
     </section>
   </div>
+  <footer
+    className="footer "
+  >
+    <p>
+      © 2018. Made by Emmanuel
+    </p>
+  </footer>
   <footer
     className="footer "
   >
