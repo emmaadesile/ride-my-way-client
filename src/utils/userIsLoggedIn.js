@@ -1,7 +1,8 @@
-import jwtDecode from 'jwt-decode';
+import jwtDecode from "jwt-decode";
 
 const userIsLoggedIn = () => {
   const { token } = localStorage;
+  // early return if user is not set
   if (!token) {
     return false;
   }
@@ -13,10 +14,11 @@ const userIsLoggedIn = () => {
     const { exp } = decoded;
     const currentDate = new Date();
 
-    return ((exp * 1000) - currentDate.getTime()) > 1;
+    // check if token is still valid
+    return exp * 1000 - currentDate.getTime() > 1;
   } catch (error) {
-    return false
+    return false;
   }
-}
+};
 
 export default userIsLoggedIn;

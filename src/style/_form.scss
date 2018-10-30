@@ -9,14 +9,13 @@
 
 .loading-container {
   height: 100vh;
-  background-color: rgba(255, 255, 255, 0.95);
+  background-color: rgba(255, 255, 255, 0.90);
   display: grid;
   align-items: center;
   justify-items: center;
 }
 
 .wrapper2 {
-  // background-image: url("http://res.cloudinary.com/dn6fnuhxr/image/upload/v1530273594/blur.jpg");
   background-color: #192739;
   background-size: cover;
   background-position: center;
@@ -42,7 +41,7 @@
   background: #fff;
   border-radius: 5px;
 
-  @media (max-width: 360px) {
+  @media screen and (max-width: 360px) {
     .form {
       max-width: 350px;
     }

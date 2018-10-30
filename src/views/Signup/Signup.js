@@ -95,25 +95,16 @@ class Signup extends React.Component {
 
     if (this.validateSignup() === false) return;
 
-    this.setState({
-      loading: true
-    });
+    // this.setState({
+    //   loading: true
+    // });
 
-    registerUser(user)
-      .then(response => {
-        this.setState({
-          loadiing: false
-        });
-      })
-      .catch(error => {
-        this.setState({ loading: false });
-      });
-  };
+  registerUser(user);
+  }
 
   render() {
     const { message } = this.props;
     const { loading, error } = this.state;
-    console.log(loading, error);
     return (
       <Fragment>
         {loading ? (
@@ -168,7 +159,7 @@ class Signup extends React.Component {
                 />
                 <input
                   className="form-control email"
-                  type="text"
+                  type="email"
                   name="email"
                   placeholder="Email"
                   onChange={this.handleChange}

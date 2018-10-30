@@ -65,5 +65,7 @@ $primary-color: #ff00bf;
 }
 
 @media screen and (max-width: 1028px) {
-    
+  .navbar__container {
+    grid-template-columns: 1fr 5fr;
+  }
 }
