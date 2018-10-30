@@ -16,7 +16,7 @@
     "coveralls": "nyc --reporter=lcov --reporter=text-lcov npm test",
     "coverage": "nyc report --reporter=text-lcov | coveralls",
     "heroku-postbuild": "npm run build",
-    "start": "serve -s dist/"
+    "start": "serve -s dist"
   },
   "repository": {
     "type": "git",
@@ -38,7 +38,8 @@
     "react-redux": "^5.1.0",
     "react-router-dom": "^4.3.1",
     "redux": "^4.0.1",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "serve": "^10.0.2"
   },
   "devDependencies": {
     "@reach/router": "^1.2.1",
