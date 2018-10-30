@@ -1,8 +1,6 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { create } from 'react-test-renderer';
-import App from '../App';
-
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "../App";
 
 describe("Tests for App component", () => {
   it("renders without crashing", () => {
@@ -10,9 +8,4 @@ describe("Tests for App component", () => {
     ReactDOM.render(<App />, div);
     ReactDOM.unmountComponentAtNode(div);
   });
-})
-
-describe("Snapshot testing for App", () => {
-  const app = create(<App />);
-  expect(app.toJSON()).toMatchSnapshot();
-})
+});
