@@ -1,0 +1,17 @@
+.loading__animation {
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+  border: 5px solid #e8eaf6;
+  border-radius: 100%;
+  animation: animate 500ms linear infinite;
+}
+.loading {
+  border-top-color: #c2185b;
+  border-left-color: #c2185b;
+}
+@keyframes animate {
+  to {
+    transform: rotate(1turn);
+  }
+}

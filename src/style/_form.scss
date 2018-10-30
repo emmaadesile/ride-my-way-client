@@ -1,0 +1,102 @@
+:root {
+  --black: #272727;
+  --blue: #0b7fdd;
+  --dark-blue: #0c6ebf;
+  --green: #06d19c;
+  --dark-green: #09bb8c;
+  --dark: #192739;
+}
+
+.loading-container {
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.95);
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+
+.wrapper2 {
+  // background-image: url("http://res.cloudinary.com/dn6fnuhxr/image/upload/v1530273594/blur.jpg");
+  background-color: #192739;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+}
+
+.form-wrapper {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  min-height: 90vh;
+  padding-top: 20px;
+}
+
+.form {
+  width: 400px;
+  display: grid;
+  grid-template-columns: repeat(minmax(150px, 1fr));
+  box-sizing: border-box;
+  margin-top: 1em;
+  padding: 20px;
+  box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2);
+  background: #fff;
+  border-radius: 5px;
+
+  @media (max-width: 360px) {
+    .form {
+      max-width: 350px;
+    }
+  }
+}
+
+.form-label {
+  font-size: 2em;
+  margin-bottom: 0.5em;
+  text-align: center;
+  color: rgb(72, 72, 72);
+}
+
+.form-control {
+  padding: 15px;
+  margin: 5px 0;
+  display: block;
+  border: 1px solid #d3d3d3;
+  border-radius: 4px;
+  transition: 0.5s ease-in all;
+}
+
+.form-control:focus {
+  padding: 15px;
+  outline: 0;
+  border-color: var(--blue);
+}
+
+.form p {
+  text-align: center;
+}
+
+.footer p {
+  color: white;
+}
+
+textarea {
+  font-family: "Helvetica Neue", sans-serif;
+}
+
+.ride-logo {
+  width: 120px;
+  height: auto;
+  justify-self: center;
+}
+
+.errorMessage {
+  background: rgb(251, 107, 107);
+  color: white;
+  padding: 10px 20px;
+}
+
+.successMessage {
+  background: rgb(42, 195, 42);
+  color: white;
+  padding: 10px 20px;
+}

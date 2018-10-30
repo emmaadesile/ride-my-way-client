@@ -1,3 +1,86 @@
+:root {
+  --red: #f50000;
+  --blue: #0c6ebf;
+  --dark-blue: #0c6ebf;
+  --green: #06d19c;
+  --dark-green: #09bb8c;
+  --white: #eee;
+}
+
 .text-center {
   text-align: center;
 }
+
+/* Button styles ===============================*/
+.btn {
+  padding: 0.4rem 1.3rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 5px;
+  display: block;
+  border: 0;
+  text-decoration: none;
+  text-align: center;
+  margin: 1rem 0;
+  color: white;
+  cursor: pointer;
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+/*Button Primary*/
+.btn__primary {
+  background: var(--blue);
+  border-color: var(--blue);
+}
+
+.btn__primary:hover {
+  background: var(--dark-blue);
+  border-color: var(--dark-blue);
+}
+
+/*Button Secondary*/
+.btn__secondary {
+  background: var(--green);
+  border-color: var(--green);
+}
+
+.btn__secondary:hover {
+  background: var(--dark-green);
+  border-color: var(--dark-green);
+}
+
+/*Button Danger*/
+.btn__danger {
+  background: var(--red);
+  border-color: var(--red);
+}
+
+/* Button default */
+.btn__grey {
+  color: #24292e;
+  background-color: #e6e6e6;
+  border-color: #e6e6e6;
+}
+
+.btn__grey:hover {
+  color: #24292e;
+  background-color: #d5d5d5;
+  border-color: #d5d5d5;
+}
+
+.btn__rounded {
+  border-radius: 25px;
+}
+
+.btn__inline {
+  display: inline-block;
+}
+
+.signup-btn, .signin-btn, .btn-ride {
+  padding: 0.9rem 2rem;
+}
+
