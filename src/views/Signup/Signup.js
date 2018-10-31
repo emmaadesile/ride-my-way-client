@@ -2,7 +2,6 @@ import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import signup from "../../actions/signup";
-import Loading from "../../components/Loading/Loading";
 import rideLogo from "../../assets/img/rideLogo.png";
 import UserValidation from "../../utils/userValidation";
 
@@ -55,7 +54,7 @@ class Signup extends React.Component {
       });
     }
 
-    if (password !== confirmPassword) {
+    if (password.trim() !== confirmPassword.trim()) {
       this.setState({
         error: {
           password: "Passwords do not match"
@@ -73,7 +72,6 @@ class Signup extends React.Component {
   };
 
   handleSubmit = event => {
-    console.log(this.validateSignup());
     event.preventDefault();
     const { registerUser } = this.props;
     const {
@@ -94,22 +92,19 @@ class Signup extends React.Component {
     };
 
     if (this.validateSignup() === false) return;
-
-    // this.setState({
-    //   loading: true
-    // });
-
-  registerUser(user);
-  }
+    registerUser(user);
+  };
 
   render() {
-    const { message } = this.props;
-    const { loading, error } = this.state;
+    const { loading, stateError, isAuthenticated } = this.props;
+    const { error } = this.state;
+    console.log(isAuthenticated);
+
+    if (isAuthenticated) {
+      this.props.history.push('/');
+    }
     return (
       <Fragment>
-        {loading ? (
-          <Loading />
-        ) : (
           <div className="wrapper2">
             <div className="form-wrapper">
               <Link to="/">
@@ -123,14 +118,16 @@ class Signup extends React.Component {
                 <label className="form-label" htmlFor="create-account">
                   Create an account
                 </label>
+                {stateError ? <div className='errorMessage'>{stateError}</div> : null}
                 {Object.entries(error).length === 0 ? null : (
                   <div>
                     {Object.entries(error).map((err, index) => (
-                      <div className='errorMessage' key={index}>{err[1]}</div>
+                      <div className="errorMessage" key={index}>
+                        {err[1]}
+                      </div>
                     ))}
                   </div>
                 )}
-                <div className="message" />
                 <input
                   className="form-control firstname"
                   type="text"
@@ -194,12 +191,11 @@ class Signup extends React.Component {
                 </button>
                 <p>
                   Already Registered?
-                  <Link to="./login">Sign in</Link>
+                  <Link to="/login">Sign in</Link>
                 </p>
               </form>
             </div>
           </div>
-        )}
       </Fragment>
     );
   }
@@ -209,8 +205,8 @@ const mapStateToProps = state => {
   const { auth } = state;
   return {
     loading: auth.signup.loading,
-    error: auth.signup.error,
-    message: auth.signup.message
+    stateError: auth.signup.error,
+    isAuthenticated: auth.isAuthenticated
   };
 };
 

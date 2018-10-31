@@ -1,31 +1,31 @@
-import * as types from "../actionTypes/signup";
-import axios from "axios";
 import jwtDecode from "jwt-decode";
+
+import {
+  SIGNUP_SUCCESS,
+  SIGNUP_LOADING,
+  SIGNUP_ERROR
+} from "../actionTypes/signup";
+import axios from "axios";
 
 const API = process.env.REACT_APP_API;
 
-const signUpLoading = isLoading => ({
-  type: types.SIGNUP_LOADING,
+const signupLoading = isLoading => ({
+  type: SIGNUP_LOADING,
   payload: isLoading
 });
 
 const signupSuccess = body => ({
-  type: types.SIGNUP_SUCCESS,
+  type: SIGNUP_SUCCESS,
   payload: body
 });
 
-const signupLoading = isLoading => ({
-  type: types.SIGNUP_LOADING,
-  payload: isLoading
-});
-
 const signupError = error => ({
-  type: types.SIGNUP_ERROR,
+  type: SIGNUP_ERROR,
   payload: error
 });
 
 const signup = user => dispatch => {
-  dispatch(signUpLoading(true));
+  dispatch(signupLoading(true));
   axios
     .post("http://localhost:8000/auth/signup", user, {
       headers: {
@@ -33,26 +33,22 @@ const signup = user => dispatch => {
       }
     })
     .then(response => {
-      console.log(response);
       if (response.data.status === "Success") {
-        console.log(response.data)
         dispatch(signupLoading(false));
         const { token } = response.data;
         localStorage.setItem("token", token);
-        localStorage.setItem("user", jwtDecode(token));
-        dispatch(signupSuccess(response.data));
+        localStorage.setItem("user", JSON.stringify(jwtDecode(token)));
+        dispatch(signupSuccess(response.data.message));
       }
     })
     .catch(error => {
       dispatch(signupLoading(false));
       if (error.response) {
-        // console.log(error.response);
         return dispatch(signupError(error.response.data));
       }
-      console.log(error);
       return dispatch(
         signupError({
-          error: "An error occured on the server. Pleas try again"
+          error: "An error occured on the server. Please try again"
         })
       );
     });

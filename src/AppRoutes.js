@@ -4,7 +4,7 @@ import Homepage from "./views/Homapage/Homepage";
 import About from "./views/About/About";
 import UserProfile from "./views/UserProfile/UserProfile";
 import Signup from "./views/Signup/Signup";
-import Login from "./views/Login/Login";
+import Login from "./views/Signin/Signin";
 import Footer from "./components/common/Footer";
 
 class AppRoutes extends Component {

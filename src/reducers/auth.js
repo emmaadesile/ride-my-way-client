@@ -2,8 +2,10 @@ import isEmpty from 'lodash/isEmpty';
 
 import { SET_CURRENT_USER, LOGOUT_USER } from '../actionTypes/auth';
 import { SIGNUP_SUCCESS } from '../actionTypes/signup';
+import { SIGNIN_SUCCESS } from '../actionTypes/signin';
 
 import signup from './signup';
+import signin from './signin';
 import initialState from '../store/initialState';
 
 const auth = (state = initialState.auth, action) => {
@@ -21,7 +23,7 @@ const auth = (state = initialState.auth, action) => {
         user: {}
       }
 
-    // case SIGN_IN_SUCCESS:
+    case SIGNIN_SUCCESS:
     case SIGNUP_SUCCESS:
       return {
         ...state,
@@ -31,7 +33,7 @@ const auth = (state = initialState.auth, action) => {
     default:
       return {
         ...state,
-        // signin: signin(state.signin, action),
+        signin: signin(state.signin, action),
         signup: signup(state.signup, action)
       }
   }

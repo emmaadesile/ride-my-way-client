@@ -3,11 +3,13 @@ const initialState = {
     user: {},
     signup: {
       loading: false,
-      error: ''
+      error: '',
+      message: ''
     },
     signin: {
       loading: false,
-      error: ''
+      error: '',
+      message: ''
     },
     isAuthenticated: false
   }
