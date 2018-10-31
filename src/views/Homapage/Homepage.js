@@ -4,7 +4,6 @@ import customerCare from "../../assets/img/customerCare.png";
 import confirmed from "../../assets/img/confirmed.png";
 import timeManagement from "../../assets/img/timeManagement.png";
 import Navbar from "../../components/common/Navbar";
-import Footer from "../../components/common/Footer";
 
 const Homepage = () => {
   return (
@@ -88,7 +87,6 @@ const Homepage = () => {
           </div>
         </section>
       </div>
-      <Footer />
     </Fragment>
   );
 };

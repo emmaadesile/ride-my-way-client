@@ -17,9 +17,10 @@
 
 .wrapper2 {
   background-color: #192739;
+  background-image: url("http://res.cloudinary.com/dn6fnuhxr/image/upload/v1530273594/blur.jpg");
   background-size: cover;
   background-position: center;
-  min-height: 100vh;
+  min-height: 90vh;
 }
 
 .form-wrapper {
@@ -92,10 +93,12 @@ textarea {
   background: rgb(251, 107, 107);
   color: white;
   padding: 10px 20px;
+  text-align: center;
 }
 
 .successMessage {
   background: rgb(42, 195, 42);
   color: white;
   padding: 10px 20px;
+  text-align: center;
 }

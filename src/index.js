@@ -9,13 +9,13 @@ import "./style/style.scss";
 
 const store = configureStore();
 
-// if (userIsLoggedIn()) {
-//   // set current user in store
-//   const user = JSON.parse(localStorage.user);
-//   store.dispatch(setLoggedInUser(user));
-// } else {
-//   store.dispatch(logOutUser());
-// }
+if (userIsLoggedIn()) {
+  // set current user in store
+  const user = (localStorage.user);
+  store.dispatch(setLoggedInUser(user));
+} else {
+  store.dispatch(logOutUser());
+}
 
 render(
   <Provider store={store}>
