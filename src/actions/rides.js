@@ -26,7 +26,7 @@ const fetchAllRides = () => dispatch => {
   const { token } = localStorage;
 
   return axios
-    .get("https://ride-my-way-webapp.herokuapp.com/rides", {
+    .get("https://emmaadesile-ridemyway.herokuapp.com/rides", {
       headers: {
         "x-access-token": `${token}`,
         "Content-Types": "application/json"

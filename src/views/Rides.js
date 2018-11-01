@@ -35,6 +35,7 @@ class Rides extends Component {
   render() {
     const { rides, loading } = this.props;
     const { showModal } = this.state;
+
     return (
       <Fragment>
         <div className="wrapper3">
@@ -43,7 +44,8 @@ class Rides extends Component {
             <Loading />
           ) : (
             <section className="rides mt-3 mb-2 pb-4">
-              <h4 className="ride-heading ">Available Rides</h4>
+
+              <h4 className="ride-heading ">{rides.length === 0 ? 'No rides available' : 'Available Rides'}</h4>
               {rides.map(ride => (
                 <div className="ride ride-1" key={ride.ride_id}>
                   <div className="icon">

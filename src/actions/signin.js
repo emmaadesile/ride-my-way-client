@@ -25,21 +25,23 @@ const signinLoading = isLoading => ({
 const signin = user => dispatch => {
   dispatch(signinLoading(true));
   return axios
-    .post('https://ride-my-way-webapp.herokuapp.com/auth/signin', user, {
+    .post("https://emmaadesile-ridemyway.herokuapp.com/auth/signin", user, {
       headers: {
         "Content-Types": "application/json"
       }
     })
     .then(response => {
       localStorage.setItem("token", response.data.userToken);
-      localStorage.setItem("user", JSON.stringify(jwtDecode(response.data.userToken)));
+      localStorage.setItem(
+        "user",
+        JSON.stringify(jwtDecode(response.data.userToken))
+      );
       dispatch(signinSuccess(response.data));
     })
     .catch(error => {
-      console.log(error);
       dispatch(signinLoading(false));
       if (error.response) {
-        return dispatch(signinError(error.response.data));
+        return dispatch(signinError(error.response.data.error));
       }
       return dispatch(
         signinError("Server unreachable at the moment. Please again later")
