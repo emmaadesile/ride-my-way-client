@@ -7,8 +7,6 @@ import {
   SIGNIN_ERROR
 } from "../actionTypes/signin";
 
-const API = process.env.REACT_APP_API;
-
 const signinSuccess = body => ({
   type: SIGNIN_SUCCESS,
   payload: body
@@ -27,7 +25,7 @@ const signinLoading = isLoading => ({
 const signin = user => dispatch => {
   dispatch(signinLoading(true));
   return axios
-    .post("http://localhost:8000/auth/signin", user, {
+    .post('https://ride-my-way-webapp.herokuapp.com/auth/signin', user, {
       headers: {
         "Content-Types": "application/json"
       }

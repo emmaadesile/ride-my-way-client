@@ -36,7 +36,10 @@ class Navbar extends Component {
             {isAuthenticated ? (
               <section className="div_navbar_items">
                 <li className="navbar_items">
-                  <Link to="/auth/signup"> Rides </Link>
+                  <Link to="/rides"> Rides </Link>
+                </li>
+                <li className="navbar_items">
+                  <Link to="/create-ride"> Create Ride </Link>
                 </li>
                 <li className=" navbar_items ">
                   <Link to="/requests"> Ride Requests </Link>
@@ -45,8 +48,7 @@ class Navbar extends Component {
                   <Link to="/user-profile"> Profile </Link>
                 </li>
                 <li className=" navbar_items " style={{cursor: 'pointer'}}>
-                {/* eslint-disable-next-line */}
-                  <a onClick={this.handleLogout}> Signout </a>
+                  <Link to='/logout' onClick={this.handleLogout}> Signout </Link>
                 </li>
               </section>
             ) : (
