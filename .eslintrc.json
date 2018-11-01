@@ -27,5 +27,8 @@
     "browser": true,
     "node": true,
     "jest": true
+  },
+  "globals": {
+    "__API__": true
   }
 }

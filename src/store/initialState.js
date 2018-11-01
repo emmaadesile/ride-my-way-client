@@ -12,6 +12,16 @@ const initialState = {
       message: ''
     },
     isAuthenticated: false
+  },
+  rides: {
+    data: [],
+    loading: false,
+    error: ''
+  },
+  singleRide: {
+    rideDetails: {},
+    loading: false,
+    error: ''
   }
 }
 

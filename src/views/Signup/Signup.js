@@ -191,7 +191,7 @@ class Signup extends React.Component {
                 </button>
                 <p>
                   Already Registered?
-                  <Link to="/login">Sign in</Link>
+                  <Link to="/auth/login">Sign in</Link>
                 </p>
               </form>
             </div>

@@ -6,6 +6,7 @@ export const logout = () => ({
 
 export const logOutUser = () => dispatch => {
   localStorage.removeItem('user');
+  localStorage.removeItem('token');
   dispatch(logout());
 };
 

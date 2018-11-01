@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import signin from "../../actions/signin";
+import Loading from '../../components/Loading/Loading';
 import rideLogo from "../../assets/img/rideLogo.png";
 
 class Signin extends React.Component {
@@ -28,18 +29,19 @@ class Signin extends React.Component {
   };
 
   render() {
-    const { stateError, isAuthenticated } = this.props;
+    const { stateError, isAuthenticated, loading } = this.props;
 
     if (isAuthenticated) {
       this.props.history.push("/");
     }
-    console.log(isAuthenticated)
+
     return (
       <div className="wrapper2">
         <div className="form-wrapper">
           <Link to="/">
             <img src={rideLogo} alt="logo" className="ride-logo" />
           </Link>
+          {loading ? <Loading /> : null}
           <form
             className="form signin-form"
             style={{ alignSelf: "start" }}
@@ -72,7 +74,7 @@ class Signin extends React.Component {
             </button>
             <p>
               Not a member?
-              <Link to="/signup">Sign up</Link>
+              <Link to="/auth/signup">Sign up</Link>
             </p>
           </form>
         </div>
