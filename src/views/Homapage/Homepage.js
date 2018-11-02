@@ -17,7 +17,11 @@ const Homepage = () => {
             <br />
             and money on your commute everyday
           </h2>
-          <Link to="/auth/signup" className='btn btn_primary'>Get Started</Link>
+          <button className='btn btn__primary btn__inline btn__rounded btn__inline '>
+            <Link to="/auth/signup">
+              Get Started
+            </Link>
+          </button>
         </header>
 
         <div className="intro text-center ">

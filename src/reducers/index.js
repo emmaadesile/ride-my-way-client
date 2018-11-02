@@ -4,13 +4,15 @@ import signup from "./signup";
 import signin from "./signin";
 import rides from "./rides";
 import viewRide from "./viewRide";
+import createRide from './createRide';
 
 const rootReducer = combineReducers({
   auth,
   signup,
   signin,
   rides,
-  viewRide
+  viewRide,
+  createRide
 });
 
 export default rootReducer;

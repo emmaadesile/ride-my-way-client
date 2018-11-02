@@ -25,7 +25,7 @@ const signinLoading = isLoading => ({
 const signin = user => dispatch => {
   dispatch(signinLoading(true));
   return axios
-    .post("https://emmaadesile-ridemyway.herokuapp.com/auth/signin", user, {
+    .post("http://localhost:8000/auth/signin", user, {
       headers: {
         "Content-Types": "application/json"
       }
