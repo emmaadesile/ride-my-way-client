@@ -25,12 +25,16 @@ const joinRide = rideid => dispatch => {
   const { token } = localStorage;
 
   return axios
-    .post(`http://localhost:8000/rides/${rideid}/requests`, {},{
-      headers: {
-        "Content-Type": "application/json",
-        "x-access-token": `${token}`
+    .post(
+      `http://localhost:8000/rides/${rideid}/requests`,
+      {},
+      {
+        headers: {
+          "Content-Type": "application/json",
+          "x-access-token": `${token}`
+        }
       }
-    })
+    )
     .then(response => {
       dispatch(joinRideLoading(false));
       if (response.data.status === "Success") {
@@ -44,6 +48,9 @@ const joinRide = rideid => dispatch => {
         dispatch(joinRideLoading(false));
         return dispatch(joinRideError(error.response.error));
       }
+      if (error === undefined) {
+        dispatch(joinRideError("You can only join the ride once"));
+      }
       return dispatch(
         joinRideError(
           "Server uncreachable at the moment. Please try again later"
@@ -51,5 +58,9 @@ const joinRide = rideid => dispatch => {
       );
     });
 };
+
+export const clearMessage = () => ({
+  type: "CLEAR_RIDE_REQUEST_MESSAGE"
+});
 
 export default joinRide;

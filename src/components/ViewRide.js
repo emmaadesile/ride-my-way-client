@@ -2,12 +2,17 @@ import React, { Component, Fragment } from "react";
 import ReactDOM from "react-dom";
 import { connect } from "react-redux";
 import viewRide from "../actions/viewRide";
-import joinRide from "../actions/joinRide";
+import joinRide, { clearMessage } from "../actions/joinRide";
 
 const modalRoot = document.getElementById("modal");
 
 class ViewRide extends Component {
   el = document.createElement("div");
+
+  state = {
+    joinButtonActive: false,
+    rideId: ""
+  };
 
   componentDidMount() {
     const { fetchRideDetails, rideid } = this.props;
@@ -16,8 +21,27 @@ class ViewRide extends Component {
 
   handleJoinRideRequest = () => {
     const { rideid, joinRide } = this.props;
+    const { rideId } = this.state;
+    this.setState({
+      rideId: rideid
+    });
+
+    if (rideId === rideid) {
+      this.setState({
+        joinButtonActive: false
+      });
+    }
+
     joinRide(rideid);
   };
+
+  componentWillUnmount() {
+    const { clearRequestMessage } = this.props;
+    clearRequestMessage();
+    this.setState({
+      joinButtonClicked: false
+    });
+  }
 
   render() {
     const {
@@ -27,6 +51,8 @@ class ViewRide extends Component {
       rideRequestMessage,
       rideRequestError
     } = this.props;
+
+    const { joinButtonActive } = this.state;
 
     return ReactDOM.createPortal(
       <Fragment>
@@ -51,26 +77,29 @@ class ViewRide extends Component {
                       <h6>Seats Available: {ride.seatsavailable}</h6>
                     </div>
                   ))}
+              {rideRequestMessage ? (
+                <div className="text-success">{rideRequestMessage}</div>
+              ) : null}
+              {rideRequestError ? (
+                <div className="text-danger">{rideRequestError}</div>
+              ) : null}
             </div>
             <div className="modal-footer">
-              {rideRequestMessage ? (
-                <div className='text-success'>{rideRequestMessage}</div>
-              ) : (
-                <div className='modal-footer-items'>
-                  <button
-                    className="btn btn__grey btn-cancel"
-                    onClick={closeModal}
-                  >
-                    Cancel
-                  </button>
-                  <button
-                    className="btn btn__secondary btn-join-ride"
-                    onClick={this.handleJoinRideRequest}
-                  >
-                    Join
-                  </button>
-                </div>
-              )}
+              <div className="modal-footer-items">
+                <button
+                  className="btn btn__grey btn-cancel"
+                  onClick={closeModal}
+                >
+                  Cancel
+                </button>
+                <button
+                  className="btn__disabled : btn btn__secondary"
+                  onClick={this.handleJoinRideRequest}
+                  disabled={joinButtonActive}
+                >
+                  Join
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -100,6 +129,9 @@ const mapDispatchToProps = dispatch => ({
   },
   joinRide(rideid) {
     return dispatch(joinRide(rideid));
+  },
+  clearRequestMessage() {
+    return dispatch(clearMessage());
   }
 });
 

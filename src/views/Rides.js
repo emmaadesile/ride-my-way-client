@@ -31,7 +31,6 @@ class Rides extends Component {
     });
   };
 
-
   render() {
     const { rides, loading } = this.props;
     const { showModal, rideid } = this.state;
