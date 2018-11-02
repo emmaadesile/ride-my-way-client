@@ -8,7 +8,6 @@ import { logOutUser, setLoggedInUser } from './actions/auth';
 import "./style/style.scss";
 
 const store = configureStore();
-console.log(__API__);
 
 if (userIsLoggedIn()) {
   // set current user in store
