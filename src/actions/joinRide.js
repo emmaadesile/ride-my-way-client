@@ -26,7 +26,7 @@ const joinRide = rideid => dispatch => {
 
   return axios
     .post(
-      `http://localhost:8000/rides/${rideid}/requests`,
+      `${__API__}/rides/${rideid}/requests`,
       {},
       {
         headers: {

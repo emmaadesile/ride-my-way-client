@@ -27,9 +27,12 @@ describe("signup new user", () => {
         email: "johndoe@mail.com",
         password: "johndoe"
       };
-      axiosMock
-        .onPost("https://emmaadesile-ridemyway.herokuapp.com/auth/signup", user)
-        .reply(200, "Sign up successful");
+      axiosMock.onPost("http://localhost:8000/auth/signup", user).reply(200, {
+        message: "Sign up successful",
+        status: "Success",
+        token:
+          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOnsidXNlcl9pZCI6MTA4LCJmaXJzdG5hbWUiOiJyb3NlIiwibGFzdG5hbWUiOiJtYXJ5IiwidXNlcm5hbWUiOiJyb3NlbWFyeSIsImVtYWlsIjoicm9zZW1hcnlAbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYSQxMCRVMFVRdDhsRmZvQW5LbEZ3aHFPaFUuaE5UNEJGS1hlOTFnTy5JT09ETTliMWM5YjFwTUcwUyJ9LCJpYXQiOjE1NDExNTgyMTYsImV4cCI6MTU0MTI0NDYxNn0.uH0yEbtBNC-1-wKITYUTjjYJwdEmEJIqf_2hAFQdVMc"
+      });
 
       const expectedAction = [
         {

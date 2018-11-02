@@ -26,7 +26,7 @@ const fetchAllRides = () => dispatch => {
   const { token } = localStorage;
 
   return axios
-    .get("http://localhost:8000/rides", {
+    .get(`${__API__}/rides`, {
       headers: {
         "x-access-token": `${token}`,
         "Content-Types": "application/json"

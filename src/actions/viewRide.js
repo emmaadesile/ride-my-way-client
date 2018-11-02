@@ -24,7 +24,7 @@ const viewRide = rideid => dispatch => {
   const { token } = localStorage;
   dispatch(viewRideLoading(true));
   return axios
-    .get(`http://localhost:8000/rides/${rideid}`, {
+    .get(`${__API__}/rides/${rideid}`, {
       headers: {
         "Content-Type": "application/json",
         "x-access-token": `${token}`

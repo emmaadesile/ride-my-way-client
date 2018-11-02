@@ -25,7 +25,7 @@ const signupError = error => ({
 const signup = user => dispatch => {
   dispatch(signupLoading(true));
   return axios
-    .post("http://localhost:8000/auth/signup", user, {
+    .post(`${__API__}/auth/signup`, user, {
       headers: {
         "Content-Type": "application/json"
       }
@@ -41,6 +41,7 @@ const signup = user => dispatch => {
     })
     .catch(error => {
       dispatch(signupLoading(false));
+      console.log(error)
       if (error.response) {
         return dispatch(signupError(error.response.data));
       }
