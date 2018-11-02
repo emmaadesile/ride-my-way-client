@@ -24,7 +24,7 @@ const viewRide = rideid => dispatch => {
   const { token } = localStorage;
   dispatch(viewRideLoading(true));
   return axios
-    .get(`https://emmaadesile-ridemyway.herokuapp.com/rides/${rideid}`, {
+    .get(`http://localhost:8000/rides/${rideid}`, {
       headers: {
         "Content-Type": "application/json",
         "x-access-token": `${token}`

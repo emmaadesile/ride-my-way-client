@@ -25,7 +25,7 @@ const signupError = error => ({
 const signup = user => dispatch => {
   dispatch(signupLoading(true));
   axios
-    .post("https://emmaadesile-ridemyway.herokuapp.com/auth/signup", user, {
+    .post("http://localhost:8000/auth/signup", user, {
       headers: {
         "Content-Type": "application/json"
       }

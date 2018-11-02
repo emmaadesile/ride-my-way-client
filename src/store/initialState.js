@@ -22,6 +22,11 @@ const initialState = {
     data: [],
     loading: false,
     error: ''
+  },
+  createRide: {
+    message: '',
+    loading: false,
+    error: '',
   }
 }
 
