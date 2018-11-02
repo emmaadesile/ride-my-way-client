@@ -18,8 +18,8 @@ const initialState = {
     loading: false,
     error: ''
   },
-  singleRide: {
-    rideDetails: {},
+  viewRide: {
+    data: [],
     loading: false,
     error: ''
   }

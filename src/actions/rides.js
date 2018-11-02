@@ -33,10 +33,8 @@ const fetchAllRides = () => dispatch => {
       }
     })
     .then(response => {
-      console.log(response);
       dispatch(fetchAllRidesLoading(false));
       if (response.data.status === "Success") {
-        console.log(response.data.rides);
         dispatch(fetchAllRidesSuccess(response.data.rides));
       }
       return response;

@@ -3,7 +3,8 @@
 
 # Ride My Way Client
 
-This the client app for Ride-My-Way [API](https://github.com/emmaadesile/Ride-My-Way)
+Ride My Way is a carpoolng applicaiton
+(https://ride-my-way-client.herokuapp.com)
 
 ## Getting Started
 
