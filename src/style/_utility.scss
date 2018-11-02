@@ -82,6 +82,19 @@ $primary-color: #ff00bf;
   display: inline-block;
 }
 
+button:disabled,
+button[disabled]{
+  background-color: #adadad;
+  color: #666666;
+}
+
+button:disabled:hover,
+button[disabled]:hover{
+  background-color: #adadad;
+  color: #666666;
+  cursor: arrow;
+}
+
 .signup-btn, .signin-btn, .btn-ride {
   padding: 0.9rem 2rem;
 }

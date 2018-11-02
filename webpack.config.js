@@ -12,7 +12,7 @@ const miniCssExtractPlugin = new MiniCssExtractPlugin({
 });
 
 const env = process.env.NODE_ENV;
-const apiHost = env === 'production' ? 'https://emmaadesile-ridemyway.herokuapp.com' : 'http://localhost:8000'
+const apiHost = env === 'production' ? "'https://emmaadesile-ridemyway.herokuapp.com'" : "'http://localhost:8000'"
 module.exports = {
   entry: {
     filename: "./src/index.js"
@@ -66,10 +66,6 @@ module.exports = {
     miniCssExtractPlugin, 
     new webpack.DefinePlugin({
       __API__: apiHost,
-      'process.env': {
-        NODE_ENV: JSON.stringify(process.env.NODE_ENV),
-        REACT_APP_API: JSON.stringify(process.env.REACT_APP_API)
-      }
     })
   ]
 };

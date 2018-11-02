@@ -26,7 +26,7 @@ const createRide = rideData => dispatch => {
   dispatch(createRideLoading(true));
 
   return axios
-    .post("http://localhost:8000/users/rides", rideData, {
+    .post(`${__API__}/users/rides`, rideData, {
       headers: {
         "Content-Type": "application/json",
         "x-access-token": `${token}`
