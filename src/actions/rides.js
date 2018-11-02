@@ -40,6 +40,7 @@ const fetchAllRides = () => dispatch => {
       return response;
     })
     .catch(error => {
+      console.log(error)
       dispatch(fetchAllRidesLoading(false));
       if (error.response) {
         dispatch(fetchAllRidesError(error.response.data));
