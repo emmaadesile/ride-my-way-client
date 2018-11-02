@@ -3,8 +3,7 @@ const HtmlWebPackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const htmlPlugin = new HtmlWebPackPlugin({
-  template: "./src/index.html",
-  filename: "./index.html"
+  template: "./src/index.html"
 });
 
 const miniCssExtractPlugin = new MiniCssExtractPlugin({
@@ -13,7 +12,7 @@ const miniCssExtractPlugin = new MiniCssExtractPlugin({
 });
 
 const env = process.env.NODE_ENV;
-const apiHost = env === 'production' ? 'https://emmaadesile-ridemyway.herokuapp.com' : 'http://localhost:3000'
+const apiHost = env === 'production' ? 'https://emmaadesile-ridemyway.herokuapp.com' : 'http://localhost:8000'
 module.exports = {
   entry: {
     filename: "./src/index.js"
@@ -66,7 +65,11 @@ module.exports = {
     htmlPlugin,
     miniCssExtractPlugin, 
     new webpack.DefinePlugin({
-      __API__: apiHost
+      __API__: apiHost,
+      'process.env': {
+        NODE_ENV: JSON.stringify(process.env.NODE_ENV),
+        REACT_APP_API: JSON.stringify(process.env.REACT_APP_API)
+      }
     })
   ]
 };

@@ -22,7 +22,6 @@ class Navbar extends Component {
   render() {
     const { toggle } = this.state;
     const { isAuthenticated } = this.props;
-    console.log(isAuthenticated);
     return (
       <Fragment>
         <div className={`navbar ${toggle ? "responsive" : ""}`}>

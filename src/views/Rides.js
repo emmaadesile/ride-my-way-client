@@ -3,13 +3,13 @@ import { connect } from "react-redux";
 import fetchRides from "../actions/rides";
 import Navbar from "../components/common/Navbar";
 import Loading from "../components/Loading/Loading";
-import JoinRide from "../components/JoinRide";
+import ViewRide from "../components/ViewRide";
 import car from "../assets/img/car.png";
 
 class Rides extends Component {
   state = {
     showModal: false,
-    rideId: ''
+    rideid: ''
   };
 
   componentDidMount = () => {
@@ -18,10 +18,10 @@ class Rides extends Component {
   };
 
   showModal = (event) => {
-    const { id } = event.target.dataset;
-    console.log(id);
+    const { rideid } = event.target.dataset;
     this.setState({
-      showModal: true
+      showModal: true,
+      rideid
     });
   };
 
@@ -34,7 +34,7 @@ class Rides extends Component {
 
   render() {
     const { rides, loading } = this.props;
-    const { showModal } = this.state;
+    const { showModal, rideid } = this.state;
 
     return (
       <Fragment>
@@ -58,7 +58,7 @@ class Rides extends Component {
                     id="btn-modal"
                     className="btn btn__secondary"
                     onClick={this.showModal}
-                    data-id={ride.ride_id}
+                    data-rideid={ride.ride_id}
                   >
                     View
                   </button>
@@ -66,7 +66,7 @@ class Rides extends Component {
               ))}
             </section>
           )}
-          {showModal ? <div>Modal Active</div> : null}
+          {showModal ? <ViewRide rideid={rideid} closeModal={this.closeModal} /> : null}
         </div>
       </Fragment>
     );

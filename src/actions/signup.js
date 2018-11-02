@@ -7,8 +7,6 @@ import {
 } from "../actionTypes/signup";
 import axios from "axios";
 
-const API = process.env.REACT_APP_API;
-
 const signupLoading = isLoading => ({
   type: SIGNUP_LOADING,
   payload: isLoading
