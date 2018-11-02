@@ -27,6 +27,11 @@ const initialState = {
     message: '',
     loading: false,
     error: '',
+  },
+  joinRide: {
+    loading: '',
+    message: '',
+    error: '',
   }
 }
 

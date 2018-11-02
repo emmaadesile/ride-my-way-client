@@ -2,23 +2,31 @@ import React, { Component, Fragment } from "react";
 import ReactDOM from "react-dom";
 import { connect } from "react-redux";
 import viewRide from "../actions/viewRide";
+import joinRide from "../actions/joinRide";
 
 const modalRoot = document.getElementById("modal");
 
 class ViewRide extends Component {
   el = document.createElement("div");
 
-  state = {
-    view: false
-  };
-
   componentDidMount() {
     const { fetchRideDetails, rideid } = this.props;
     fetchRideDetails(rideid);
   }
 
+  handleJoinRideRequest = () => {
+    const { rideid, joinRide } = this.props;
+    joinRide(rideid);
+  };
+
   render() {
-    const { closeModal, data, loading, error } = this.props;
+    const {
+      closeModal,
+      data,
+      error,
+      rideRequestMessage,
+      rideRequestError
+    } = this.props;
 
     return ReactDOM.createPortal(
       <Fragment>
@@ -45,10 +53,24 @@ class ViewRide extends Component {
                   ))}
             </div>
             <div className="modal-footer">
-              <button className="btn btn__grey btn-cancel" onClick={closeModal}>
-                Cancel
-              </button>
-              <button className="btn btn__secondary btn-join-ride">Join</button>
+              {rideRequestMessage ? (
+                <div className='text-success'>{rideRequestMessage}</div>
+              ) : (
+                <div className='modal-footer-items'>
+                  <button
+                    className="btn btn__grey btn-cancel"
+                    onClick={closeModal}
+                  >
+                    Cancel
+                  </button>
+                  <button
+                    className="btn btn__secondary btn-join-ride"
+                    onClick={this.handleJoinRideRequest}
+                  >
+                    Join
+                  </button>
+                </div>
+              )}
             </div>
           </div>
         </div>
@@ -59,18 +81,25 @@ class ViewRide extends Component {
 }
 
 const mapStateToProps = state => {
-  const { viewRide } = state;
+  const { viewRide, joinRide } = state;
 
   return {
     data: viewRide.data,
     loading: viewRide.loading,
-    error: viewRide.error
+    error: viewRide.error,
+
+    rideRequestMessage: joinRide.message,
+    rideRequestError: joinRide.error,
+    rideRequestLoading: joinRide.loading
   };
 };
 
 const mapDispatchToProps = dispatch => ({
   fetchRideDetails(rideid) {
     return dispatch(viewRide(rideid));
+  },
+  joinRide(rideid) {
+    return dispatch(joinRide(rideid));
   }
 });
 

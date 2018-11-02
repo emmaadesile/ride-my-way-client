@@ -1,0 +1,32 @@
+import {
+  JOIN_RIDE_ERROR,
+  JOIN_RIDE_LOADING,
+  JOIN_RIDE_SUCCESS
+} from "../actionTypes/joinRide";
+
+import initialState from "../store/initialState";
+
+const joinRide = (state = initialState.joinRide, action) => {
+
+  switch (action.type) {
+    case JOIN_RIDE_LOADING:
+      return {
+        ...state,
+        loading: action.payload
+      }
+    case JOIN_RIDE_SUCCESS:
+      return {
+        ...state,
+        message: action.payload
+      }
+    case JOIN_RIDE_ERROR:
+      return {
+        ...state,
+        error: action.payload
+      }
+    default:
+      return state;
+  }
+}
+
+export default joinRide;
