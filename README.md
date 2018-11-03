@@ -1,5 +1,4 @@
-[![Build Status](https://travis-ci.org/emmaadesile/ride-my-way-client.svg?branch=develop)](https://travis-ci.org/emmaadesile/ride-my-way-client) [![Coverage Status](https://coveralls.io/repos/github/emmaadesile/ride-my-way-client/badge.svg?branch=ch-setup-react-app-160949901)](https://coveralls.io/github/emmaadesile/ride-my-way-client?branch=ch-setup-react-app-160949901)
-
+[![Build Status](https://travis-ci.org/emmaadesile/ride-my-way-client.svg?branch=develop)](https://travis-ci.org/emmaadesile/ride-my-way-client) [![Coverage Status][![codecov](https://codecov.io/gh/emmaadesile/ride-my-way-client/branch/develop/graph/badge.svg)](https://codecov.io/gh/emmaadesile/ride-my-way-client)
 
 # Ride My Way Client
 

@@ -13,3 +13,4 @@ env:
 
 after_success:
   - npm run coverage
+  - npx install codecov

@@ -19,12 +19,6 @@ const joinRide = (state = initialState.joinRide, action) => {
         message: action.payload
       };
     case JOIN_RIDE_ERROR:
-      if (typeof action.payload === undefined) {
-        return {
-          ...state,
-          error: "You can only request to join the ride once"
-        };
-      }
       return {
         ...state,
         error: action.payload
