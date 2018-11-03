@@ -37,11 +37,11 @@ class Signin extends React.Component {
 
     return (
       <div className="wrapper2">
+        {loading ? <Loading /> : null}
         <div className="form-wrapper">
           <Link to="/">
             <img src={rideLogo} alt="logo" className="ride-logo" />
           </Link>
-          {loading ? <Loading /> : null}
           <form
             className="form signin-form"
             style={{ alignSelf: "start" }}
