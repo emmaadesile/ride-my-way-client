@@ -1,12 +1,11 @@
 import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
-import { connect } from "react-redux";
 import customerCare from "../../assets/img/customerCare.png";
 import confirmed from "../../assets/img/confirmed.png";
 import timeManagement from "../../assets/img/timeManagement.png";
 import Navbar from "../../components/common/Navbar";
 
-const Homepage = ({ isAuthenticated }) => {
+const Homepage = () => {
   return (
     <Fragment>
       <div className="">
@@ -18,12 +17,11 @@ const Homepage = ({ isAuthenticated }) => {
             <br />
             and money on your commute everyday
           </h2>
-          {/* Remove get started button if the user is authenticated */}
-          {!isAuthenticated ?
-           ( <button className="btn btn__primary btn__inline btn__rounded btn__inline ">
-              <Link to="/auth/signup">Get Started</Link>
-            </button>
-          ) : null}
+          <button className='btn btn__primary btn__inline btn__rounded btn__inline '>
+            <Link to="/auth/signup">
+              Get Started
+            </Link>
+          </button>
         </header>
 
         <div className="intro text-center ">
@@ -97,11 +95,4 @@ const Homepage = ({ isAuthenticated }) => {
   );
 };
 
-const mapStateToProps = state => {
-  const { auth } = state;
-  return {
-    isAuthenticated: auth.isAuthenticated
-  };
-};
-
-export default connect(mapStateToProps)(Homepage);
+export default Homepage;

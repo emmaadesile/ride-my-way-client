@@ -54,39 +54,5 @@ describe("signup new user", () => {
         expect(store.getActions()).toEqual(expectedAction);
       });
     });
-
-    it("dispatches SIGNUP_ERROR", () => {
-      const user = {
-        firstname: "john",
-        lastname: "doe",
-        username: "johndoe",
-        email: "johndoe@mail.com",
-        password: "johndoe"
-      };
-      axiosMock.onPost("http://localhost:8000/auth/signup", user).reply(500, {
-        error: "User already exists",
-        status: "Failed"
-      });
-
-      const expectedAction = [
-        {
-          type: SIGNUP_LOADING,
-          payload: true
-        },
-        {
-          type: SIGNUP_LOADING,
-          payload: false
-        },
-        {
-          type: SIGNUP_ERROR,
-          payload: { error: "User already exists", status: "Failed" }
-        }
-      ];
-
-      const store = mockStore({ auth: { signup: {} } });
-      return store.dispatch(signup(user)).then(() => {
-        expect(store.getActions()).toEqual(expectedAction);
-      });
-    });
   });
 });
