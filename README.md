@@ -1,4 +1,5 @@
-[![Build Status](https://travis-ci.org/emmaadesile/ride-my-way-client.svg?branch=develop)](https://travis-ci.org/emmaadesile/ride-my-way-client) [![Coverage Status][![codecov](https://codecov.io/gh/emmaadesile/ride-my-way-client/branch/develop/graph/badge.svg)](https://codecov.io/gh/emmaadesile/ride-my-way-client)
+[![Build Status](https://travis-ci.org/emmaadesile/ride-my-way-client.svg?branch=develop)](https://travis-ci.org/emmaadesile/ride-my-way-client) [![Test Coverage](https://api.codeclimate.com/v1/badges/eab42a90d9d5be72cb79/test_coverage)](https://codeclimate.com/github/emmaadesile/ride-my-way-client/test_coverage) [![Maintainability](https://api.codeclimate.com/v1/badges/eab42a90d9d5be72cb79/maintainability)](https://codeclimate.com/github/emmaadesile/ride-my-way-client/maintainability)
+
 
 # Ride My Way Client
 
@@ -23,7 +24,6 @@ These are things you will need to install to get the app running on your machine
 
 ```
 npm install to install app dependencies
-
 ```
 
 ## Available Scripts
@@ -39,6 +39,7 @@ The page will reload if you make edits.<br>
 You will also see any lint errors in the console.
 
 ### `npm test`
+
 Launches the test runner
 
 ### `npm test:watch`
@@ -63,10 +64,9 @@ Formats the app using the prettier plugin
 
 ## Built With
 
-* [Reactjs](http://www.reactjs.org/) - The UI libaray used
-* [Webpack](https://webpack.js.org/) - Dependency Management
-* [NYC](https://github.com/istanbuljs/nyc/) - Used to generate code coverage report
-
+- [Reactjs](http://www.reactjs.org/) - The UI libaray used
+- [Webpack](https://webpack.js.org/) - Dependency Management
+- [NYC](https://github.com/istanbuljs/nyc/) - Used to generate code coverage report
 
 ## License
 
@@ -74,7 +74,6 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
-
+- Hat tip to anyone whose code was used
+- Inspiration
+- etc
