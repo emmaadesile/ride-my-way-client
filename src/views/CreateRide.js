@@ -34,6 +34,10 @@ class CreateRide extends Component {
     createNewRide(user);
   };
 
+  clearMessage = () => {
+    const { message, error } = this.props;
+  }
+
   handleChange = event => {
     this.clearMessage()
     return this.setState({

@@ -12,6 +12,7 @@ env:
   global:
     - CC_TEST_REPORTER_ID= 9d005186e7c57ddf860d60ea362289c8ecabe564a625bc6305be1a40325eacab
 
+
 install:
 - npm install -q --no-color --no-progress
 
@@ -22,3 +23,7 @@ install:
 
 after_script:
   - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
+
+after_success:
+  - npm run coverage
+

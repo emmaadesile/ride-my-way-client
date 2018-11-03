@@ -41,6 +41,7 @@ const signup = user => dispatch => {
     })
     .catch(error => {
       dispatch(signupLoading(false));
+      console.log(error)
       if (error.response) {
         return dispatch(signupError(error.response.data));
       }
