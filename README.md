@@ -1,4 +1,5 @@
-[![Build Status](https://travis-ci.org/emmaadesile/ride-my-way-client.svg?branch=develop)](https://travis-ci.org/emmaadesile/ride-my-way-client)[![Test Coverage](https://api.codeclimate.com/v1/badges/eab42a90d9d5be72cb79/test_coverage)](https://codeclimate.com/github/emmaadesile/ride-my-way-client/test_coverage)[![Maintainability](https://api.codeclimate.com/v1/badges/eab42a90d9d5be72cb79/maintainability)](https://codeclimate.com/github/emmaadesile/ride-my-way-client/maintainability)
+[![Build Status](https://travis-ci.org/emmaadesile/ride-my-way-client.svg?branch=develop)](https://travis-ci.org/emmaadesile/ride-my-way-client) [![Test Coverage](https://api.codeclimate.com/v1/badges/eab42a90d9d5be72cb79/test_coverage)](https://codeclimate.com/github/emmaadesile/ride-my-way-client/test_coverage) [![Maintainability](https://api.codeclimate.com/v1/badges/eab42a90d9d5be72cb79/maintainability)](https://codeclimate.com/github/emmaadesile/ride-my-way-client/maintainability)
+
 
 # Ride My Way Client
 

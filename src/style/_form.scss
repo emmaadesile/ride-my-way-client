@@ -36,19 +36,13 @@
 .form {
   width: 400px;
   display: grid;
-  grid-template-columns: repeat(minmax(150px, 1fr));
+  grid-template-columns: 1fr;
   box-sizing: border-box;
   margin-top: 1em;
   padding: 20px;
   box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2);
   background: #fff;
   border-radius: 5px;
-
-  @media screen and (max-width: 360px) {
-    .form {
-      max-width: 350px;
-    }
-  }
 }
 
 .form-label {
@@ -89,6 +83,7 @@ textarea {
   width: 120px;
   height: auto;
   justify-self: center;
+  align-content: end;
 }
 
 .errorMessage {
@@ -117,4 +112,10 @@ textarea {
 
 .text-danger {
   color: #ff3434;
+}
+
+@media screen and (max-width: 500px) {
+  .form {
+    width: 350px;
+  }
 }

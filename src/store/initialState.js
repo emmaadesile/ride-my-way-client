@@ -32,6 +32,11 @@ const initialState = {
     loading: '',
     message: '',
     error: '',
+  },
+  rideRequests: {
+    loading: false,
+    requests: [],
+    error: ''
   }
 }
 
