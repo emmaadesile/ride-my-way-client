@@ -40,7 +40,7 @@ const viewRide = rideid => dispatch => {
     .catch(error => {
       dispatch(viewRideLoading(false));
       if (error.response) {
-        dispatch(viewRideError(error.response.data.error));
+        dispatch(viewRideError(error.response.data));
       }
       return dispatch(
         viewRideError(

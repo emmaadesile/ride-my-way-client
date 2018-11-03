@@ -38,18 +38,17 @@ const joinRide = rideid => dispatch => {
     .then(response => {
       dispatch(joinRideLoading(false));
       if (response.data.status === "Success") {
-        dispatch(joinRideSuccess(response.data.message));
+        return dispatch(joinRideSuccess(response.data.message));
       }
       return response;
     })
     .catch(error => {
-      console.log(error);
       if (error.response) {
         dispatch(joinRideLoading(false));
         return dispatch(joinRideError(error.response.error));
       }
       if (error === undefined) {
-        dispatch(joinRideError("You can only join the ride once"));
+        return dispatch(joinRideError("You can only join the ride once"));
       }
       return dispatch(
         joinRideError(
