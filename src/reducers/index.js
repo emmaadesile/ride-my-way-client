@@ -6,7 +6,6 @@ import rides from "./rides";
 import viewRide from "./viewRide";
 import createRide from './createRide';
 import joinRide from './joinRide';
-import rideRequests from './rideRequests'
 
 const rootReducer = combineReducers({
   auth,
@@ -15,8 +14,7 @@ const rootReducer = combineReducers({
   rides,
   viewRide,
   createRide,
-  joinRide,
-  rideRequests
+  joinRide
 });
 
 export default rootReducer;

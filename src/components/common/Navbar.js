@@ -41,9 +41,6 @@ class Navbar extends Component {
                   <Link to="/create-ride"> Create Ride </Link>
                 </li>
                 <li className=" navbar_items ">
-                  <Link to="/ride-requests"> Ride Requests </Link>
-                </li>
-                <li className=" navbar_items ">
                   <Link to="/user-profile"> Profile </Link>
                 </li>
                 <li className=" navbar_items " style={{cursor: 'pointer'}}>

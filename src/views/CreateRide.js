@@ -35,7 +35,6 @@ class CreateRide extends Component {
   };
 
   handleChange = event => {
-    this.clearMessage()
     return this.setState({
       [event.target.name]: event.target.value
     });

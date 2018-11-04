@@ -5,7 +5,8 @@ import thunk from "redux-thunk";
 import createRide from "../../actions/createRide";
 import {
   CREATE_RIDE_LOADING,
-  CREATE_RIDE_SUCCESS
+  CREATE_RIDE_SUCCESS,
+  CREATE_RIDE_ERROR
 } from "../../actionTypes/createRide";
 
 const middlewares = [thunk];

@@ -6,12 +6,11 @@ import {
   Redirect
 } from "react-router-dom";
 import Homepage from "./views/Homapage/Homepage";
-// import UserProfile from "./views/UserProfile/UserProfile";
+import UserProfile from "./views/UserProfile";
 import Signup from "./views/Signup/Signup";
 import Login from "./views/Signin/Signin";
 import Rides from './views/Rides';
 import CreateRide from './views/CreateRide';
-import RideRequests from './views/RideRequests';
 import ProtectedRoute from './components/ProtectedRoute';
 import Footer from "./components/common/Footer";
 
@@ -27,8 +26,8 @@ class AppRoutes extends Component {
             <Route path="/auth/login" component={Login} />
             <ProtectedRoute path="/rides" component={Rides} />
             <ProtectedRoute path="/create-ride" component={CreateRide} />
-            {/* <ProtectedRoute path="/user-profile" component={UserProfile} /> */}
-            <ProtectedRoute path='/ride-requests' component={RideRequests} />;
+            <ProtectedRoute path="/user-profile" component={UserProfile} />
+            {/* <ProtectedRoute path='/ride-requests' component={RideRequests} />; */}
           </Switch>
           <Footer />
         </Fragment>

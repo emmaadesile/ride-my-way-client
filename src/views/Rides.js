@@ -42,7 +42,7 @@ class Rides extends Component {
           {loading ? (
             <Loading />
           ) : (
-            <section className="rides mt-3 mb-2 pb-4">
+            <section className="rides mt-1 mb-2 pb-4">
 
               <h4 className="ride-heading ">{rides.length === 0 ? 'No rides available' : 'Available Rides'}</h4>
               {rides.map(ride => (
