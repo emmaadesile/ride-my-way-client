@@ -28,7 +28,6 @@ class AppRoutes extends Component {
             <ProtectedRoute path="/rides" component={Rides} />
             <ProtectedRoute path="/create-ride" component={CreateRide} />
             {/* <ProtectedRoute path="/user-profile" component={UserProfile} /> */}
-            <ProtectedRoute path="/user-profile" component={UserProfile} />
             <ProtectedRoute path='/ride-requests' component={RideRequests} />;
           </Switch>
           <Footer />
