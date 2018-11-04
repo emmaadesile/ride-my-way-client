@@ -3,7 +3,7 @@ import { shallow } from "enzyme";
 import { Provider } from "react-redux";
 import configureMockStore from "redux-mock-store";
 import toJson from 'enzyme-to-json';
-import Signup from "../../views/Signup/Signup.jsx";
+import UserProfile from "../../views/UserProfile.jsx";
 
 const mockStore = configureMockStore();
 const store = mockStore();
@@ -14,7 +14,7 @@ describe("Signin Page", () => {
   test("renders the signin page", () => {
     const wrapper = shallow(
       <Provider store={store}>
-        <Signup registerUser={mockFunction} />
+        <UserProfile registerUser={mockFunction} />
       </Provider>
     );
     expect(wrapper.exists()).toBe(true);
@@ -23,7 +23,7 @@ describe("Signin Page", () => {
   it('should render correctly', () => {
     const wrapper = shallow(
       <Provider store={store}>
-        <Signup />
+        <UserProfile />
       </Provider>
     );
     expect(toJson(wrapper)).toMatchSnapshot();

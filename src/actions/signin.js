@@ -39,7 +39,6 @@ const signin = user => dispatch => {
       dispatch(signinSuccess(response.data));
     })
     .catch((error) => {
-      console.log(error);
       dispatch(signinLoading(false));
       if (error.response) {
         return dispatch(signinError(error.response.data.error));

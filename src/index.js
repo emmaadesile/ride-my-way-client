@@ -2,7 +2,7 @@ import React from "react";
 import { render } from "react-dom";
 import { Provider } from "react-redux";
 import configureStore from './store/configureStore';
-import App from "./App";
+import App from "./App.jsx";
 import userIsLoggedIn from './utils/userIsLoggedIn';
 import { logOutUser, setLoggedInUser } from './actions/auth';
 import "./style/style.scss";

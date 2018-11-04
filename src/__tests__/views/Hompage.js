@@ -3,7 +3,7 @@ import { shallow } from "enzyme";
 import { Provider } from "react-redux";
 import configureMockStore from 'redux-mock-store';
 import toJson from 'enzyme-to-json';
-import Homepage from "../../views/Homapage/Homepage";
+import Homepage from "../../views/Homapage/Homepage.jsx";
 
 const mockStore = configureMockStore();
 const store = mockStore();

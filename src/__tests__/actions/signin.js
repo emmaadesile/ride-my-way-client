@@ -4,6 +4,7 @@ import thunk from "redux-thunk";
 import axios from "axios";
 import signin from "../../actions/signin";
 import {
+  SIGNIN_ERROR,
   SIGNIN_LOADING,
   SIGNIN_SUCCESS
 } from "../../actionTypes/signin";
@@ -18,7 +19,7 @@ describe("signup new user", () => {
   });
 
   describe("handle signin", () => {
-    it("dispatches SIGNUP_SUCCESS action", () => {
+    it("dispatches SIGNIN_SUCCESS action", () => {
       const user = {
         email: "johndoe@mail.com",
         password: "johndoe"
@@ -47,6 +48,26 @@ describe("signup new user", () => {
       ];
 
       const store = mockStore({ auth: { user: {} } });
+      return store.dispatch(signin(user)).then(() => {
+        expect(store.getActions()).toEqual(expectedAction);
+      });
+    });
+
+    it("dispatches SIGNIN_ERROR action", () => {
+      const user = {
+        email: "johndoe@mail.com",
+        password: "johnny"
+      };
+      axiosMock.onPost(`${__API__}/auth/signin`, user).reply(400, {
+        message: "Signin error",
+        status: "error"
+      });
+      const expectedAction = [
+        { payload: true, type: SIGNIN_LOADING },
+        { payload: false, type: SIGNIN_LOADING },
+        { payload: undefined, type: SIGNIN_ERROR }
+      ];
+      const store = mockStore({ auth: { user } });
       return store.dispatch(signin(user)).then(() => {
         expect(store.getActions()).toEqual(expectedAction);
       });

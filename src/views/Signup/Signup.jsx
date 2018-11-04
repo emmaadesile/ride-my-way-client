@@ -25,7 +25,7 @@ class Signup extends React.Component {
   };
 
   validateSignup = () => {
-    const { username, email, password, confirmPassword } = this.state;
+    const { username, password, confirmPassword } = this.state;
 
     if (UserValidation.validateUsername(username) === false) {
       this.setState({
@@ -44,14 +44,6 @@ class Signup extends React.Component {
         }
       });
       return false;
-    }
-
-    if (UserValidation.validateEmail(email) === false) {
-      this.setState({
-        error: {
-          email: "Email is invalid"
-        }
-      });
     }
 
     if (password.trim() !== confirmPassword.trim()) {

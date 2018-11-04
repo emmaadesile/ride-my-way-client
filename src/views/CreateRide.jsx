@@ -1,8 +1,8 @@
 import React, { Component, Fragment } from "react";
 import createRide from "../actions/createRide";
 import { connect } from "react-redux";
-import Navbar from "../components/common/Navbar";
-import Loading from "../components/Loading/Loading";
+import Navbar from "../components/common/Navbar.jsx";
+import Loading from "../components/Loading/Loading.jsx";
 
 class CreateRide extends Component {
   state = {
@@ -35,7 +35,6 @@ class CreateRide extends Component {
   };
 
   handleChange = event => {
-    this.clearMessage()
     return this.setState({
       [event.target.name]: event.target.value
     });

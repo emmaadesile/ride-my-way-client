@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import signin from "../../actions/signin";
-import Loading from '../../components/Loading/Loading';
+import Loading from '../../components/Loading/Loading.jsx';
 import rideLogo from "../../assets/img/rideLogo.png";
 
 class Signin extends React.Component {

@@ -1,9 +1,9 @@
 import React, { Component, Fragment } from "react";
 import { connect } from "react-redux";
 import fetchRides from "../actions/rides";
-import Navbar from "../components/common/Navbar";
-import Loading from "../components/Loading/Loading";
-import ViewRide from "../components/ViewRide";
+import Navbar from "../components/common/Navbar.jsx";
+import Loading from "../components/Loading/Loading.jsx";
+import ViewRide from "../components/ViewRide.jsx";
 import car from "../assets/img/car.png";
 
 class Rides extends Component {
@@ -42,7 +42,7 @@ class Rides extends Component {
           {loading ? (
             <Loading />
           ) : (
-            <section className="rides mt-3 mb-2 pb-4">
+            <section className="rides mt-1 mb-2 pb-4">
 
               <h4 className="ride-heading ">{rides.length === 0 ? 'No rides available' : 'Available Rides'}</h4>
               {rides.map(ride => (

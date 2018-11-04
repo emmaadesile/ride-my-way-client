@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import customerCare from "../../assets/img/customerCare.png";
 import confirmed from "../../assets/img/confirmed.png";
 import timeManagement from "../../assets/img/timeManagement.png";
-import Navbar from "../../components/common/Navbar";
+import Navbar from "../../components/common/Navbar.jsx";
 
 const Homepage = ({ isAuthenticated }) => {
   return (
