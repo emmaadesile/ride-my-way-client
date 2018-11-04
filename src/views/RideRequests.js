@@ -5,6 +5,10 @@ import Navbar from '../components/common/Navbar';
 
 
 class RideRequests extends Component {
+  componentDidMount() {
+    fetchRideRequests()
+  }
+
   render() {
     return (
       <Fragment>

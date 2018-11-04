@@ -18,7 +18,7 @@ describe("Test CREATE_RIDE action", () => {
   });
 
   describe("Dispatch create ride", () => {
-    it("it dispatches CREATE_RIDE_SUCCESS action", () => {
+    it("dispatches CREATE_RIDE_SUCCESS action", () => {
       const rideData = {
         location: "Ibadan",
         destination: "LA",

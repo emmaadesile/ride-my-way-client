@@ -43,13 +43,12 @@ const joinRide = rideid => dispatch => {
       return response;
     })
     .catch(error => {
-      console.log(error);
       if (error.response) {
         dispatch(joinRideLoading(false));
         return dispatch(joinRideError(error.response.error));
       }
       if (error === undefined) {
-        dispatch(joinRideError("You can only join the ride once"));
+        return dispatch(joinRideError("You can only join the ride once"));
       }
       return dispatch(
         joinRideError(

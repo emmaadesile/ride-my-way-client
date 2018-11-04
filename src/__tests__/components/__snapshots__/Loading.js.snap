@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Loading component should render correctly 1`] = `
+<div
+  className="loading-container"
+>
+  <section
+    className="text-center"
+  >
+    <span
+      className="loading__animation loading"
+    />
+  </section>
+</div>
+`;
