@@ -26,7 +26,7 @@ const fetchRideRequests = () => dispatch => {
   const { token } = localStorage;
 
   return axios
-    .get(`${__API__}/users/rides/:rideId/requests`, {
+    .get(`${__API__}/users/rides/1/requests`, {
       headers: {
         "Content-Type": "application/json",
         "x-access-token": `${token}`
@@ -40,6 +40,9 @@ const fetchRideRequests = () => dispatch => {
       return response;
     })
     .catch(error => {
+      console.log('====================================');
+      console.log(error);
+      console.log('====================================');
       dispatch(fetchRideRequestsLoading(false));
       if (error.reponse) {
         dispatch(fetchRideRequestsError(error.response.error));

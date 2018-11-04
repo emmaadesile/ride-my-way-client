@@ -38,7 +38,7 @@ const joinRide = rideid => dispatch => {
     .then(response => {
       dispatch(joinRideLoading(false));
       if (response.data.status === "Success") {
-        return dispatch(joinRideSuccess(response.data.message));
+        dispatch(joinRideSuccess(response.data.message));
       }
       return response;
     })

@@ -94,8 +94,12 @@
 
   .navbar.responsive li.navbar_items {
     display: block;
-    padding: 50px;
+    padding: 20px;
     font-size: 25px;
+  }
+
+  .navbar.responsive li.navbar_items:first-child {
+    margin-top: 20px;
   }
   .navbar.responsive li.navbar_items a {
     display: block;
